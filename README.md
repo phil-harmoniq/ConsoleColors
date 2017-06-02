@@ -6,7 +6,7 @@ Disclaimer: This library only works on Linux currently
 
 ## Usage
 
-Several color properties are available in the Clr class. Simply use string interpolation whil calling `Clr.Write()` or `Clr.WriteLine()` to print with colors!
+Several color properties are available in the Clr class. Simply use string interpolation while calling `Clr.Write()` or `Clr.WriteLine()` to print with colors!
 
 ```C#
 Clr.WriteLine($"Hey! {Clr.Cyan}This is pretty {Clr.Bold}cool!{Clr.Reset");
