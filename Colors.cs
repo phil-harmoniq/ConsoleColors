@@ -18,13 +18,12 @@ namespace ConsoleColors
         public const string Magenta = "$(tput setaf 5)";
         public const string Cyan = "$(tput setaf 6)";
         public const string White = "$(tput setaf 7)";
-        private static ProcessStartInfo _startInfo;
 
         public static void Write(string output)
         {
             if (isLinux)
             {
-                StartShell(NewProcess(output, "n"));
+                StartShell(NewProcess(output, "-n"));
                 _shell.WaitForExit();
                 CloseShell();
             }
