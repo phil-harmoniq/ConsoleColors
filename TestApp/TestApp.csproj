@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleColors\ConsoleColors.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>alpha</VersionSuffix>
+  </PropertyGroup>
+
+</Project>
