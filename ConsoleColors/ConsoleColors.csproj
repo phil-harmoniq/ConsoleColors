@@ -10,13 +10,14 @@
     <Copyright>MIT</Copyright>
   </PropertyGroup>
   
+  <!--
   <ItemGroup>
     <ProjectReference Include="../../Shell.NET/Shell.NET/Shell.NET.csproj" />
   </ItemGroup>
-
-  <!--
-  <ItemGroup>
-    <PackageReference Include="Shell.NET" Version="0.1.0-alpha" />
-  </ItemGroup>
   -->
+
+  <ItemGroup>
+    <PackageReference Include="Shell.NET" Version="0.1.1-alpha" />
+  </ItemGroup>
+
 </Project>

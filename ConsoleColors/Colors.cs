@@ -26,7 +26,7 @@ namespace ConsoleColors
         public static string Magenta { get; } = @"$(tput setaf 5)";
         public static string Cyan { get; } = @"$(tput setaf 6)";
         public static string White { get; } = @"$(tput setaf 7)";
-        private static string[] _wheel = new string[]
+        private static string[] _colors = new string[]
         {
             Bold,
             Reset,
@@ -39,6 +39,8 @@ namespace ConsoleColors
             Cyan,
             White
         };
+
+        private static string[] _regexColors = _colors.Select(c => Regex.Escape(c)).ToArray();
 
         public static void Write(string output)
         {
@@ -78,27 +80,18 @@ namespace ConsoleColors
 
         private static string ParseString(string input)
         {
-            var new_wheel = new List<string>();
-            foreach (var clr in _wheel)
-                new_wheel.Add(Regex.Escape(clr));
-            var join = string.Join("|", new_wheel);
-            var pattern = $"({join})";
+            var pattern = $"({string.Join("|", _regexColors)})";
             var split = Regex.Split(input, pattern);
-
             var parse = new List<string>();
 
             for (var i = 0; i < split.Length; i++)
             {
-                var inArray = Array.IndexOf(_wheel.ToArray(), split[i]);
+                var inArray = Array.IndexOf(_colors.ToArray(), split[i]);
                 
                 if (inArray > -1)
-                {
-                    parse.Add($"{_wheel[inArray]}");
-                }
+                    parse.Add($"{_colors[inArray]}");
                 else
-                {
                     parse.Add($"'{Sanitize(split[i])}'");
-                }
             }
 
             return string.Join("", parse);

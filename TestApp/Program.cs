@@ -10,7 +10,7 @@ namespace TestApp
         static void Main(string[] args)
         {
             Clr.SayHello();
-            Clr.WriteLine($"Th*is 'libra#r$y ) uses {Clr.Bold}{Clr.Cyan}Shell.NET{Clr.Reset}!");
+            Clr.WriteLine($"This library uses {Clr.Bold}{Clr.Cyan}Shell.NET{Clr.Reset}!");
         }
     }
 }
