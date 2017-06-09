@@ -15,7 +15,6 @@ namespace ConsoleColors
         private static bool _linux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
         private static bool _mac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
         private static Bash _bash = new Bash();
-
         public static string Bold { get; } = @"$(tput bold)";
         public static string Reset { get; } = @"$(tput sgr0)";
         public static string Black { get; } = @"$(tput setaf 0)";
@@ -39,7 +38,6 @@ namespace ConsoleColors
             Cyan,
             White
         };
-
         private static string[] _regexColors = _colors.Select(c => Regex.Escape(c)).ToArray();
 
         public static void Write(string output)
