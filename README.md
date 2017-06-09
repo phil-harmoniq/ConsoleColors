@@ -6,6 +6,8 @@
 
 Disclaimer: This library only works on Linux & MacOS currently
 
+![](http://imgur.com/RqvnNDW.png)
+
 ## Usage
 
 Several color properties are available in the Clr class. Simply use string interpolation while calling `Clr.Write()` or `Clr.WriteLine()` to print with colors!
