@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://github.com/phil-harmoniq/ConsoleColors</PackageProjectUrl>
     <RepositoryUrl>https://github.com/phil-harmoniq/ConsoleColors</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/phil-harmoniq/ConsoleColors/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageIconUrl>http://imgur.com/RqvnNDW.png</PackageIconUrl>
     <AssemblyTitle>Console Colors</AssemblyTitle>
     <PackageTags>linux;unix;mac;colors;color</PackageTags>
   </PropertyGroup>

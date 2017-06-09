@@ -4,7 +4,7 @@
 
 [Nuget]: https://img.shields.io/badge/Nuget-0.1.1-blue.svg
 
-Disclaimer: This library only works on Linux currently
+Disclaimer: This library only works on Linux & MacOS currently
 
 ## Usage
 
