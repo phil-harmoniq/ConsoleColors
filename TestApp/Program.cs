@@ -7,11 +7,10 @@ namespace TestApp
 {
     class Program
     {
-        static string version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
-
         static void Main(string[] args)
         {
-            Clr.WriteLine($"This library uses {Clr.Cyan}Shell.NET{Clr.Reset}!");
+            Clr.SayHello();
+            Clr.WriteLine($"Th*is 'libra#r$y ) uses {Clr.Bold}{Clr.Cyan}Shell.NET{Clr.Reset}!");
         }
     }
 }
