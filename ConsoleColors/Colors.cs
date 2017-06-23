@@ -56,26 +56,6 @@ namespace ConsoleColors
                 Console.Write(output);
         }
 
-        public static void SayHello()
-        {
-            WriteLine($"{Bold}"
-                    + $"{Red}C"
-                    + $"{Yellow}o"
-                    + $"{Green}n"
-                    + $"{Cyan}s"
-                    + $"{Blue}o"
-                    + $"{Magenta}l"
-                    + $"{Red}e"
-                    + $"{Yellow}C"
-                    + $"{Green}o"
-                    + $"{Cyan}l"
-                    + $"{Blue}o"
-                    + $"{Magenta}r"
-                    + $"{Red}s"
-                    + $"{White} {_v}"
-                    + $"{Reset}");
-        }
-
         private static string ParseString(string input)
         {
             var pattern = $"({string.Join("|", _regexColors)})";
@@ -99,6 +79,71 @@ namespace ConsoleColors
         {
             input = input.Replace(@"'", @"'\''");
             return input;
+        }
+
+        public static void SetBold()
+        {
+            _bash.Echo(Clr.Bold, "-n");
+        }
+
+        public static void SetReset()
+        {
+            _bash.Echo(Clr.Reset, "-n");
+        }
+
+        public static void SetBlack()
+        {
+            _bash.Echo(Clr.Black, "-n");
+        }
+
+        public static void SetRed()
+        {
+            _bash.Echo(Clr.Red, "-n");
+        }
+
+        public static void SetGreen()
+        {
+            _bash.Echo(Clr.Green, "-n");
+        }
+
+        public static void SetYellow()
+        {
+            _bash.Echo(Clr.Yellow, "-n");
+        }
+
+        public static void SetBlue()
+        {
+            _bash.Echo(Clr.Blue, "-n");
+        }
+
+        public static void SetMagenta()
+        {
+            _bash.Echo(Clr.Magenta, "-n");
+        }
+
+        public static void SetCyan()
+        {
+            _bash.Echo(Clr.Cyan, "-n");
+        }
+
+        public static void SayHello()
+        {
+            WriteLine($"{Bold}"
+                    + $"{Red}C"
+                    + $"{Yellow}o"
+                    + $"{Green}n"
+                    + $"{Cyan}s"
+                    + $"{Blue}o"
+                    + $"{Magenta}l"
+                    + $"{Red}e"
+                    + $"{Yellow}C"
+                    + $"{Green}o"
+                    + $"{Cyan}l"
+                    + $"{Blue}o"
+                    + $"{Magenta}r"
+                    + $"{Red}s"
+                    + $"{White} {_v}"
+                    + $"{Reset}");
         }
     }
 }
