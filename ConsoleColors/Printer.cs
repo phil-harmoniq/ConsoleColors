@@ -9,41 +9,18 @@ using Shell.NET;
 
 namespace ConsoleColors
 {
-    public static class Clr
+    public static class Printer
     {
         static string _v = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
         private static bool _linux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
         private static bool _mac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
-        private static Bash _bash = new Bash();
-        public static string Bold { get; } = @"$(tput bold)";
-        public static string Reset { get; } = @"$(tput sgr0)";
-        public static string Black { get; } = @"$(tput setaf 0)";
-        public static string Red { get; } = @"$(tput setaf 1)";
-        public static string Green { get; } = @"$(tput setaf 2)";
-        public static string Yellow { get; } = @"$(tput setaf 3)";
-        public static string Blue { get; } = @"$(tput setaf 4)";
-        public static string Magenta { get; } = @"$(tput setaf 5)";
-        public static string Cyan { get; } = @"$(tput setaf 6)";
-        public static string White { get; } = @"$(tput setaf 7)";
-        private static string[] _colors = new string[]
-        {
-            Bold,
-            Reset,
-            Black,
-            Red,
-            Green,
-            Yellow,
-            Blue,
-            Magenta,
-            Cyan,
-            White
-        };
-        private static string[] _regexColors = _colors.Select(c => Regex.Escape(c)).ToArray();
+        internal static Bash _bash = new Bash();
+        private static string[] _regexColors = Clr.ToArray().Select(c => Regex.Escape(c)).ToArray();
 
         public static void Write(string output)
         {
             if (_linux || _mac)
-                _bash.Command($"echo -n {ParseString(output)}");
+                _bash.Echo(output, "-en");
             else
                 Console.Write(output);
         }
@@ -51,7 +28,7 @@ namespace ConsoleColors
         public static void WriteLine(string output)
         {
             if (_linux || _mac)
-                _bash.Command($"echo {ParseString(output)}");
+                _bash.Echo(output, "-e");
             else
                 Console.Write(output);
         }
@@ -64,10 +41,10 @@ namespace ConsoleColors
 
             for (var i = 0; i < split.Length; i++)
             {
-                var inArray = Array.IndexOf(_colors.ToArray(), split[i]);
+                var inArray = Array.IndexOf(Clr.ToArray(), split[i]);
                 
                 if (inArray > -1)
-                    parse.Add($"{_colors[inArray]}");
+                    parse.Add($"{Clr.ToArray()[inArray]}");
                 else
                     parse.Add($"'{Sanitize(split[i])}'");
             }
@@ -83,12 +60,12 @@ namespace ConsoleColors
 
         public static void SetBold()
         {
-            _bash.Echo(Clr.Bold, "-n");
+            _bash.Echo(Frmt.Bold, "-n");
         }
 
         public static void SetReset()
         {
-            _bash.Echo(Clr.Reset, "-n");
+            _bash.Echo(Clr.Default, "-n");
         }
 
         public static void SetBlack()
@@ -128,22 +105,23 @@ namespace ConsoleColors
 
         public static void SayHello()
         {
-            WriteLine($"{Bold}"
-                    + $"{Red}C"
-                    + $"{Yellow}o"
-                    + $"{Green}n"
-                    + $"{Cyan}s"
-                    + $"{Blue}o"
-                    + $"{Magenta}l"
-                    + $"{Red}e"
-                    + $"{Yellow}C"
-                    + $"{Green}o"
-                    + $"{Cyan}l"
-                    + $"{Blue}o"
-                    + $"{Magenta}r"
-                    + $"{Red}s"
-                    + $"{White} {_v}"
-                    + $"{Reset}");
+            WriteLine($"{Frmt.Bold}"
+                    + $"{Clr.Red}C"
+                    + $"{Clr.Yellow}o"
+                    + $"{Clr.Green}n"
+                    + $"{Clr.Cyan}s"
+                    + $"{Clr.Blue}o"
+                    + $"{Clr.Magenta}l"
+                    + $"{Clr.Red}e"
+                    + $"{Clr.Yellow}C"
+                    + $"{Clr.Green}o"
+                    + $"{Clr.Cyan}l"
+                    + $"{Clr.Blue}o"
+                    + $"{Clr.Magenta}r"
+                    + $"{Clr.Red}s"
+                    + $"{Clr.White} {_v}"
+                    + $"{Reset.Code}"
+            );
         }
     }
 }
