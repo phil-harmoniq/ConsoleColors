@@ -4,7 +4,7 @@
 
 [Nuget]: https://img.shields.io/badge/Nuget-0.1.4-blue.svg
 
-Disclaimer: This library only works on Linux & MacOS currently
+Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
 <img src="http://i.imgur.com/SrnAEEq.png" width="40%" height="40%">
 
@@ -60,16 +60,16 @@ Note: All color properties have a corresponding class method. Examples:
 
 ## Available Formatting Properties
 
-* Bold
-* Dim
-* Underline
-* Invert
-* Hidden
-* UnBold
-* UnDim
-* UnUnderline
-* UnInvert
-* UnHidden
+* Frmt.Bold
+* Frmt.Dim
+* Frmt.Underline
+* Frmt.Invert
+* Frmt.Hidden
+* Frmt.UnBold
+* Frmt.UnDim
+* Frmt.UnUnderline
+* Frmt.UnInvert
+* Frmt.UnHidden
 
 Note: All formatting properties have corresponding activation *and* deactivation class methods. Example:
 
