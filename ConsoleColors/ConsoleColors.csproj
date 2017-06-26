@@ -3,7 +3,7 @@
     <Title>Console Colors</Title>
     <Authors>ph-hawkins</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <VersionPrefix>0.1.3</VersionPrefix>
+    <VersionPrefix>0.1.4</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
     <Description>Quick and easy console colors for C#/Unix</Description>
     <Copyright>MIT</Copyright>

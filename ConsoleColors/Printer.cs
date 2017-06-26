@@ -32,77 +32,7 @@ namespace ConsoleColors
             else
                 Console.Write(output);
         }
-
-        private static string ParseString(string input)
-        {
-            var pattern = $"({string.Join("|", _regexColors)})";
-            var split = Regex.Split(input, pattern);
-            var parse = new List<string>();
-
-            for (var i = 0; i < split.Length; i++)
-            {
-                var inArray = Array.IndexOf(Clr.ToArray(), split[i]);
-                
-                if (inArray > -1)
-                    parse.Add($"{Clr.ToArray()[inArray]}");
-                else
-                    parse.Add($"'{Sanitize(split[i])}'");
-            }
-
-            return string.Join("", parse);
-        }
-
-        private static string Sanitize(string input)
-        {
-            input = input.Replace(@"'", @"'\''");
-            return input;
-        }
-
-        public static void SetBold()
-        {
-            _bash.Echo(Frmt.Bold, "-n");
-        }
-
-        public static void SetReset()
-        {
-            _bash.Echo(Clr.Default, "-n");
-        }
-
-        public static void SetBlack()
-        {
-            _bash.Echo(Clr.Black, "-n");
-        }
-
-        public static void SetRed()
-        {
-            _bash.Echo(Clr.Red, "-n");
-        }
-
-        public static void SetGreen()
-        {
-            _bash.Echo(Clr.Green, "-n");
-        }
-
-        public static void SetYellow()
-        {
-            _bash.Echo(Clr.Yellow, "-n");
-        }
-
-        public static void SetBlue()
-        {
-            _bash.Echo(Clr.Blue, "-n");
-        }
-
-        public static void SetMagenta()
-        {
-            _bash.Echo(Clr.Magenta, "-n");
-        }
-
-        public static void SetCyan()
-        {
-            _bash.Echo(Clr.Cyan, "-n");
-        }
-
+        
         public static void SayHello()
         {
             WriteLine($"{Frmt.Bold}"
