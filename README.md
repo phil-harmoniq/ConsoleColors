@@ -10,7 +10,7 @@ Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are
 
 ## Usage
 
-Use string formatting/interpolation while calling `Printer.Write()` or `Printer.WriteLine()` to print with colors! Color properties are stored in the `Clr` class and formatting properties in the `Frmt` class. To reset all color/formatting changes, use the `Reset.Code` property or call the `Reset.All()` class method.
+Use string formatting/interpolation while calling `Printer.Write()` or `Printer.WriteLine()` to print with colors! Color properties are stored in the `Clr` class , formatting properties are in the `Frmt` class, and background color properties are in the `Bkgrd` class. To reset all color/formatting changes, use the `Reset.Code` property or call the `Reset.All()` class method.
 
 [Get this library off of Nuget!](https://www.nuget.org/packages/ConsoleColors)
 
@@ -33,7 +33,7 @@ Printer.WriteLine(string.Format("{0}{4}C#{5} in {2}{4}Linux{5} is pretty {3}{4}c
 
 Note: Remember to use Reset.All() to return back to default colors.
 
-## Available Color Properties
+## Color Properties
 
 * Clr.Default
 * Clr.Black
@@ -58,7 +58,7 @@ Note: All color properties have a corresponding class method. Examples:
 * Clr.SetBlue()
 * Clr.SetDefault()
 
-## Available Formatting Properties
+## Formatting Properties
 
 * Frmt.Bold
 * Frmt.Dim
@@ -71,7 +71,7 @@ Note: All color properties have a corresponding class method. Examples:
 * Frmt.UnInvert
 * Frmt.UnHidden
 
-Note: All formatting properties have corresponding activation *and* deactivation class methods. Example:
+Note: All formatting properties have corresponding activation *and* deactivation class methods. Examples:
 
 * Frmt.SetDim()
 * Frmt.ResetDim()
@@ -82,3 +82,12 @@ Note: All formatting properties have corresponding activation *and* deactivation
 
 * Reset.Code
 * Reset.All()
+
+## Background Color Properties
+
+Same colors as the Clr class; contained in the Bkgrd class. Examples:
+
+* Bkgrd.LtGray
+* Bkgrd.White
+* Bkgrd.SetBlue()
+* Bkgrd.SetDefault()
