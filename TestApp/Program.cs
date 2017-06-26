@@ -9,16 +9,17 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            Clr.SayHello();
+            Printer.SayHello();
             Clr.SetCyan();
-            Clr.WriteLine($"This library uses {Clr.Bold}Shell.NET!{Clr.Reset}");
-            Clr.WriteLine(string.Format("{0}{4}C#{5} in {2}{4}Linux{5} is pretty {3}{4}cool!{5}",
+            Printer.WriteLine($"This library uses {Frmt.Bold}Shell.NET!");
+            Reset.All();
+            Printer.WriteLine(string.Format("{0}{4}C#{5} in {2}{4}Linux{5} is pretty {3}{4}cool!{5}",
                 Clr.Magenta,
                 Clr.White,
                 Clr.Green,
                 Clr.Yellow,
-                Clr.Bold,
-                Clr.Reset
+                Frmt.Bold,
+                Reset.Code
             ));
         }
     }
