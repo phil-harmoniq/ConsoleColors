@@ -14,15 +14,9 @@
     <AssemblyTitle>Console Colors</AssemblyTitle>
     <PackageTags>linux;unix;mac;colors;color</PackageTags>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="../../Shell.NET/Shell.NET/Shell.NET.csproj" />
-  </ItemGroup>
 
-  <!--
   <ItemGroup>
     <PackageReference Include="Shell.NET" Version="0.1.2-alpha" />
   </ItemGroup>
-  -->
 
 </Project>
