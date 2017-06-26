@@ -4,7 +4,7 @@
 
 [Nuget]: https://img.shields.io/badge/Nuget-0.1.4-blue.svg
 
-Disclaimer: This library only works on Linux & MacOS currently
+Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
 <img src="http://i.imgur.com/SrnAEEq.png" width="40%" height="40%">
 
@@ -31,7 +31,7 @@ Printer.WriteLine(string.Format("{0}{4}C#{5} in {2}{4}Linux{5} is pretty {3}{4}c
 ));
 ```
 
-Note: Remeber to use Reset.All() to return back to default colors.
+Note: Remember to use Reset.All() to return back to default colors.
 
 ## Available Color Properties
 
@@ -53,25 +53,25 @@ Note: Remeber to use Reset.All() to return back to default colors.
 * Clr.LtMagenta
 * Clr.LtCyan
 
-Note: All color properties have a corresponding class method:
+Note: All color properties have a corresponding class method. Examples:
 
 * Clr.SetBlue()
 * Clr.SetDefault()
 
 ## Available Formatting Properties
 
-* Bold
-* Dim
-* Underline
-* Invert
-* Hidden
-* UnBold
-* UnDim
-* UnUnderline
-* UnInvert
-* UnHidden
+* Frmt.Bold
+* Frmt.Dim
+* Frmt.Underline
+* Frmt.Invert
+* Frmt.Hidden
+* Frmt.UnBold
+* Frmt.UnDim
+* Frmt.UnUnderline
+* Frmt.UnInvert
+* Frmt.UnHidden
 
-Note: All formatting properties have a corresponding activatoin *and* deactivation class methods:
+Note: All formatting properties have corresponding activation *and* deactivation class methods. Example:
 
 * Frmt.SetDim()
 * Frmt.ResetDim()
@@ -80,5 +80,5 @@ Note: All formatting properties have a corresponding activatoin *and* deactivati
 
 ## Reset Utility
 
-* Rest.Code
+* Reset.Code
 * Reset.All()
