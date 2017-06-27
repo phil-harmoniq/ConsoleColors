@@ -2,11 +2,11 @@
 
 [License]: https://img.shields.io/badge/License-MIT-blue.svg
 
-[Nuget]: https://img.shields.io/badge/Nuget-0.1.4-blue.svg
+[Nuget]: https://img.shields.io/badge/Nuget-0.1.4--alpha-blue.svg
 
 Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
-<img src="http://i.imgur.com/SrnAEEq.png" width="40%" height="40%">
+<img src="http://i.imgur.com/yoHOxQb.png" width="40%" height="40%">
 
 ## Usage
 
