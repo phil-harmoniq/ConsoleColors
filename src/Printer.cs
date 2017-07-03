@@ -9,6 +9,7 @@ using Shell.NET;
 
 namespace ConsoleColors
 {
+    /// ANSI-color compatible printer; use string formatting while calling Write() or WriteLine()
     public static class Printer
     {
         static string _v = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
@@ -17,6 +18,7 @@ namespace ConsoleColors
         internal static Bash _bash = new Bash();
         private static string[] _regexColors = Clr.ToArray().Select(c => Regex.Escape(c)).ToArray();
 
+        /// Print the given colorized string without a new line at the end
         public static void Write(string output)
         {
             if (_linux || _mac)
@@ -25,6 +27,7 @@ namespace ConsoleColors
                 Console.Write(output);
         }
 
+        /// Print the given colorized string with a new line at the end
         public static void WriteLine(string output)
         {
             if (_linux || _mac)
@@ -32,7 +35,8 @@ namespace ConsoleColors
             else
                 Console.Write(output);
         }
-        
+
+        /// Color print the library name and version
         public static void SayHello()
         {
             WriteLine($"{Frmt.Bold}"

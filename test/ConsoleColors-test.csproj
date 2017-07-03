@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../ConsoleColors/ConsoleColors.csproj" />
+    <ProjectReference Include="../src/ConsoleColors.csproj" />
   </ItemGroup>
 
 </Project>
