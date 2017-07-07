@@ -6,7 +6,7 @@
 
 Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
-<img src="http://i.imgur.com/yoHOxQb.png" width="40%" height="40%">
+<img src="http://i.imgur.com/0FO4ETr.png" width="40%" height="40%">
 
 ## Usage
 
