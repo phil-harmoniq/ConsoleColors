@@ -1,42 +1,42 @@
 namespace ConsoleColors
 {
-    /// Container class for all available foreground colors
+    /// Container class for all available background colors
     public class Bkgrd
     {
         /// Default background ANSI code (format strings with it)
-        public static readonly string Default = @"\e[49m";
+        public const string Default = @"\e[49m";
         /// Black background ANSI code (format strings with it)
-        public static readonly string Black = @"\e[40m";
+        public const string Black = @"\e[40m";
         /// White background ANSI code (format strings with it)
-        public static readonly string White = @"\e[107m";
+        public const string White = @"\e[107m";
         /// Red background ANSI code (format strings with it)
-        public static readonly string Red = @"\e[41m";
+        public const string Red = @"\e[41m";
         /// Green background ANSI code (format strings with it)
-        public static readonly string Green = @"\e[42m";
+        public const string Green = @"\e[42m";
         /// Yellow background ANSI code (format strings with it)
-        public static readonly string Yellow = @"\e[43m";
+        public const string Yellow = @"\e[43m";
         /// Blue background ANSI code (format strings with it)
-        public static readonly string Blue = @"\e[44m";
+        public const string Blue = @"\e[44m";
         /// Magenta background ANSI code (format strings with it)
-        public static readonly string Magenta = @"\e[45m";
+        public const string Magenta = @"\e[45m";
         /// Cyan background ANSI code (format strings with it)
-        public static readonly string Cyan = @"\e[46m";
+        public const string Cyan = @"\e[46m";
         /// Light gray background ANSI code (format strings with it)
-        public static readonly string LtGray = @"\e[47m";
+        public const string LtGray = @"\e[47m";
         /// Dark gray background ANSI code (format strings with it)
-        public static readonly string DrkGray = @"\e[100m";
+        public const string DrkGray = @"\e[100m";
         /// Light red background ANSI code (format strings with it)
-        public static readonly string LtRed = @"\e[91m";
+        public const string LtRed = @"\e[91m";
         /// Light green background ANSI code (format strings with it)
-        public static readonly string LtGreen = @"\e[102m";
+        public const string LtGreen = @"\e[102m";
         /// Light yellow background ANSI code (format strings with it)
-        public static readonly string LtYellow = @"\e[103m";
+        public const string LtYellow = @"\e[103m";
         /// Light blue background ANSI code (format strings with it)
-        public static readonly string LtBlue = @"\e[104m";
+        public const string LtBlue = @"\e[104m";
         /// Light magenta background ANSI code (format strings with it)
-        public static readonly string LtMagenta = @"\e[105m";
+        public const string LtMagenta = @"\e[105m";
         /// Light cyan background ANSI code (format strings with it)
-        public static readonly string LtCyan = @"\e[106m";
+        public const string LtCyan = @"\e[106m";
 
         /// Set background color to default without printing
         public static void SetDefault() => Printer._bash.Echo(Default, "-en");
