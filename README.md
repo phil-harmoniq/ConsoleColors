@@ -2,7 +2,7 @@
 
 [License]: https://img.shields.io/badge/License-MIT-blue.svg
 
-[Nuget]: https://img.shields.io/badge/Nuget-0.1.5--alpha-blue.svg
+[Nuget]: https://img.shields.io/badge/Nuget-0.1.6--alpha-blue.svg
 
 Disclaimer: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
