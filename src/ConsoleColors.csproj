@@ -5,15 +5,15 @@
     <Title>Console Colors</Title>
     <Authors>ph-hawkins</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <VersionPrefix>0.1.5</VersionPrefix>
+    <VersionPrefix>0.1.6</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
     <Description>Quick and easy console colors for C#/Unix</Description>
     <Copyright>MIT</Copyright>
     <PackageProjectUrl>https://github.com/phil-harmoniq/ConsoleColors</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/phil-harmoniq/ConsoleColors</RepositoryUrl>
+    <RepositoryUrl>git://github.com/phil-harmoniq/ConsoleColors.git</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/phil-harmoniq/ConsoleColors/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageIconUrl>http://i.imgur.com/yoHOxQb.png</PackageIconUrl>
-    <AssemblyTitle>Console Colors</AssemblyTitle>
+    <PackageIconUrl>http://i.imgur.com/0FO4ETr.png</PackageIconUrl>
+    <AssemblyTitle>ConsoleColors</AssemblyTitle>
     <PackageTags>linux;unix;mac;colors;color</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

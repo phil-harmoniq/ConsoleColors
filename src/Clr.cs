@@ -4,39 +4,39 @@ namespace ConsoleColors
     public static class Clr
     {
         /// Default foreground ANSI code (format strings with it)
-        public static readonly string Default = @"\e[39m";
+        public const string Default = @"\e[39m";
         /// Black foreground ANSI code (format strings with it)
-        public static readonly string Black = @"\e[30m";
+        public const string Black = @"\e[30m";
         /// White foreground ANSI code (format strings with it)
-        public static readonly string White = @"\e[97m";
+        public const string White = @"\e[97m";
         /// Red foreground ANSI code (format strings with it)
-        public static readonly string Red = @"\e[31m";
+        public const string Red = @"\e[31m";
         /// Green foreground ANSI code (format strings with it)
-        public static readonly string Green = @"\e[32m";
+        public const string Green = @"\e[32m";
         /// Yellow foreground ANSI code (format strings with it)
-        public static readonly string Yellow = @"\e[33m";
+        public const string Yellow = @"\e[33m";
         /// Blue foreground ANSI code (format strings with it)
-        public static readonly string Blue = @"\e[34m";
+        public const string Blue = @"\e[34m";
         /// Magenta foreground ANSI code (format strings with it)
-        public static readonly string Magenta = @"\e[35m";
+        public const string Magenta = @"\e[35m";
         /// Cyan foreground ANSI code (format strings with it)
-        public static readonly string Cyan = @"\e[36m";
+        public const string Cyan = @"\e[36m";
         /// Light gray foreground ANSI code (format strings with it)
-        public static readonly string LtGray = @"\e[37m";
+        public const string LtGray = @"\e[37m";
         /// Dark gray foreground ANSI code (format strings with it)
-        public static readonly string DrkGray = @"\e[90m";
+        public const string DrkGray = @"\e[90m";
         /// Light red foreground ANSI code (format strings with it)
-        public static readonly string LtRed = @"\e[91m";
+        public const string LtRed = @"\e[91m";
         /// Light green foreground ANSI code (format strings with it)
-        public static readonly string LtGreen = @"\e[92m";
+        public const string LtGreen = @"\e[92m";
         /// Light yellow foreground ANSI code (format strings with it)
-        public static readonly string LtYellow = @"\e[93m";
+        public const string LtYellow = @"\e[93m";
         /// Light blue foreground ANSI code (format strings with it)
-        public static readonly string LtBlue = @"\e[94m";
+        public const string LtBlue = @"\e[94m";
         /// Light magenta foreground ANSI code (format strings with it)
-        public static readonly string LtMagenta = @"\e[95m";
+        public const string LtMagenta = @"\e[95m";
         /// Light cyan foreground ANSI code (format strings with it)
-        public static readonly string LtCyan = @"\e[96m";
+        public const string LtCyan = @"\e[96m";
 
         /// Set foreground color to default without printing
         public static void SetDefault() => Printer._bash.Echo(Default, "-en");

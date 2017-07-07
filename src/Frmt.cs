@@ -4,26 +4,26 @@ namespace ConsoleColors
     public static class Frmt
     {
         /// Bold ANSI code (format strings with it)
-        public static readonly string Bold = @"\e[1m";
+        public const string Bold = @"\e[1m";
         /// Dim ANSI code (format strings with it)
-        public static readonly string Dim = @"\e[2m";
+        public const string Dim = @"\e[2m";
         /// Underline ANSI code (format strings with it)
-        public static readonly string Underline = @"\e[4m";
+        public const string Underline = @"\e[4m";
         /// Invert ANSI code (format strings with it)
-        public static readonly string Invert = @"\e[7m";
+        public const string Invert = @"\e[7m";
         /// Hidden ANSI code (format strings with it)
-        public static readonly string Hidden = @"\e[8m";
+        public const string Hidden = @"\e[8m";
 
         /// Reset bold ANSI code (format strings with it)
-        public static readonly string UnBold = @"\e[21m";
+        public const string UnBold = @"\e[21m";
         /// Reset dim ANSI code (format strings with it)
-        public static readonly string UnDim = @"\e[22m";
+        public const string UnDim = @"\e[22m";
         /// Reset underline ANSI code (format strings with it)
-        public static readonly string UnUnderline = @"\e[24m";
+        public const string UnUnderline = @"\e[24m";
         /// Reset invert ANSI code (format strings with it)
-        public static readonly string UnInvert = @"\e[27m";
+        public const string UnInvert = @"\e[27m";
         /// Reset hidden ANSI code (format strings with it)
-        public static readonly string UnHidden = @"\e[28m";
+        public const string UnHidden = @"\e[28m";
 
         /// Enable bold formatting without printing
         public static void SetBold() => Printer._bash.Echo(Bold, "-en");
