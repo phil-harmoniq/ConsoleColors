@@ -2,8 +2,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.Diagnostics;
-using System.Text.RegularExpressions;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Shell.NET;
 
@@ -16,7 +14,6 @@ namespace ConsoleColors
         private static bool _linux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
         private static bool _mac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
         internal static Bash _bash = new Bash();
-        private static string[] _regexColors = Clr.ToArray().Select(c => Regex.Escape(c)).ToArray();
 
         /// Print the given colorized string without a new line at the end
         public static void Write(string output)
