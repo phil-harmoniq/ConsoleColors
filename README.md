@@ -1,12 +1,10 @@
-# Console Colors [![License][License]](LICENSE.md) [![Nuget][Nuget]](https://www.nuget.org/packages/ConsoleColors)
+# Console Colors [![NuGet](https://img.shields.io/nuget/v/ConsoleColors.svg)](https://preview.nuget.org/packages/ConsoleColors) [![Build Status](https://travis-ci.org/phil-harmoniq/ConsoleColors.svg?branch=master)](https://travis-ci.org/phil-harmoniq/ConsoleColors)
 
 [License]: https://img.shields.io/badge/License-MIT-blue.svg
 
-[Nuget]: https://img.shields.io/badge/Nuget-0.1.6--alpha-blue.svg
-
 Note: This library only works on Linux & MacOS currently. Alpha builds are subject to change.
 
-<img src="http://i.imgur.com/0FO4ETr.png" width="40%" height="40%">
+<img src="http://i.imgur.com/fzoBQsG.png" width="287px" height="287px">
 
 ## Usage
 
@@ -18,10 +16,8 @@ Use string formatting/interpolation while calling `Printer.Write()` or `Printer.
 
 ```C#
 Printer.SayHello();
-Printer.WriteLine(
-    $@"This library uses {Clr.Cyan}{Frmt.Bold}Shell.NET{Clr.Default}!{Reset.Code}");
-Printer.WriteLine(
-    $"{Bkgrd.Blue}{Frmt.Bold}I'm Mr. Meseeks Look at me!{Reset.Code}");
+Printer.WriteLine($@"This library uses {Clr.Cyan}{Frmt.Bold}Shell.NET{Clr.Default}!{Reset.Code}");
+Printer.WriteLine($"{Bkgrd.Blue}{Frmt.Bold}I'm Mr. Meseeks Look at me!{Reset.Code}");
 Printer.WriteLine(
     string.Format("{0}{4}C#{5} + {2}{4}*nix{5} = {3}{4}<3{5}",
     Clr.Magenta,
