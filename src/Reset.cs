@@ -6,6 +6,6 @@ namespace ConsoleColors
         /// All attribute reset ANSI code (format strings with it)
         public static string Code = @"\e[0m";
         /// Disable all formatting and reset colors without printing
-        public static void All() => Printer.Echo(Code, "-e");
+        public static void All() => Printer.Echo(Code, "-ne");
     }
 }
