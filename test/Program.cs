@@ -11,7 +11,7 @@ namespace TestApp
         {
             Printer.SayHello();
             Printer.WriteLine(
-                $@"This library uses {Clr.Cyan}{Frmt.Bold}Shell.NET{Clr.Default}!{Reset.Code}");
+                $"This library uses {Clr.Cyan}{Frmt.Bold}Shell.NET{Clr.Default}!{Reset.Code}");
             Printer.WriteLine(
                 $"{Bkgrd.Blue}{Frmt.Bold}I'm Mr. Meseeks Look at me!{Reset.Code}");
             Printer.WriteLine(

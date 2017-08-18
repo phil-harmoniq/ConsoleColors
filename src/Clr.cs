@@ -39,39 +39,39 @@ namespace ConsoleColors
         public const string LtCyan = @"\e[96m";
 
         /// Set foreground color to default without printing
-        public static void SetDefault() => Printer._bash.Echo(Default, "-en");
+        public static void SetDefault() => Printer.Echo(Default, "-e");
         /// Set foreground color to black without printing
-        public static void SetBlack() => Printer._bash.Echo(Black, "-en");
+        public static void SetBlack() => Printer.Echo(Black, "-e");
         /// Set foreground color to white without printing
-        public static void SetWhite() => Printer._bash.Echo(White, "-en");
+        public static void SetWhite() => Printer.Echo(White, "-e");
         /// Set foreground color to red without printing
-        public static void SetRed() => Printer._bash.Echo(Red, "-en");
+        public static void SetRed() => Printer.Echo(Red, "-e");
         /// Set foreground color to green without printing
-        public static void SetGreen() => Printer._bash.Echo(Green, "-en");
+        public static void SetGreen() => Printer.Echo(Green, "-e");
         /// Set foreground color to yellow without printing
-        public static void SetYellow() => Printer._bash.Echo(Yellow, "-en");
+        public static void SetYellow() => Printer.Echo(Yellow, "-e");
         /// Set foreground color to blue without printing
-        public static void SetBlue() => Printer._bash.Echo(Blue, "-en");
+        public static void SetBlue() => Printer.Echo(Blue, "-e");
         /// Set foreground color to magenta without printing
-        public static void SetMagenta() => Printer._bash.Echo(Magenta, "-en");
+        public static void SetMagenta() => Printer.Echo(Magenta, "-e");
         /// Set foreground color to cyan without printing
-        public static void SetCyan() => Printer._bash.Echo(Cyan, "-en");
+        public static void SetCyan() => Printer.Echo(Cyan, "-e");
         /// Set foreground color to light gray without printing
-        public static void SetLtGray() => Printer._bash.Echo(LtGray, "-en");
+        public static void SetLtGray() => Printer.Echo(LtGray, "-e");
         /// Set foreground color to dark gray without printing
-        public static void SetDrkGray() => Printer._bash.Echo(DrkGray, "-en");
+        public static void SetDrkGray() => Printer.Echo(DrkGray, "-e");
         /// Set foreground color to light red without printing
-        public static void SetLtRed() => Printer._bash.Echo(LtRed, "-en");
+        public static void SetLtRed() => Printer.Echo(LtRed, "-e");
         /// Set foreground color to light green without printing
-        public static void SetLtGreen() => Printer._bash.Echo(LtGreen, "-en");
+        public static void SetLtGreen() => Printer.Echo(LtGreen, "-e");
         /// Set foreground color to light yellow without printing
-        public static void SetLtYellow() => Printer._bash.Echo(LtYellow, "-en");
+        public static void SetLtYellow() => Printer.Echo(LtYellow, "-e");
         /// Set foreground color to light blue without printing
-        public static void SetLtBlue() => Printer._bash.Echo(LtBlue, "-en");
+        public static void SetLtBlue() => Printer.Echo(LtBlue, "-e");
         /// Set foreground color to light magenta without printing
-        public static void SetLtMagenta() => Printer._bash.Echo(LtMagenta, "-en");
+        public static void SetLtMagenta() => Printer.Echo(LtMagenta, "-e");
         /// Set foreground color to light cyan without printing
-        public static void SetLtCyan() => Printer._bash.Echo(LtCyan, "-en");
+        public static void SetLtCyan() => Printer.Echo(LtCyan, "-e");
 
 
         /// Returns all available foreground colors as an array

@@ -10,7 +10,22 @@ Note: This library only works on Linux & MacOS currently. Alpha builds are subje
 
 Use string formatting/interpolation while calling `Printer.Write()` or `Printer.WriteLine()` to print with colors! Color properties are stored in the `Clr` class , formatting properties are in the `Frmt` class, and background color properties are in the `Bkgrd` class. To reset all color/formatting changes, use the `Reset.Code` property or call the `Reset.All()` class method.
 
-[Get this library off of Nuget!](https://www.nuget.org/packages/ConsoleColors)
+
+## Installation
+
+Use the .NET CLI to get [get this library off of Nuget!](https://www.nuget.org/packages/ConsoleColors)! Prereleases need an explicit version.
+
+```bash
+dotnet add package ConsoleColors -v 0.1.7-alpha
+```
+
+Or add the following to your .csproj:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="ConsoleColors" Version="0.1.8-alpha" />
+</ItemGroup>
+```
 
 ## Examples
 
