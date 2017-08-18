@@ -16,7 +16,7 @@ Use string formatting/interpolation while calling `Printer.Write()` or `Printer.
 Use the .NET CLI to get [get this library off of Nuget!](https://www.nuget.org/packages/ConsoleColors)! Prereleases need an explicit version.
 
 ```bash
-dotnet add package ConsoleColors -v 0.1.7-alpha
+dotnet add package ConsoleColors -v 0.1.8-alpha
 ```
 
 Or add the following to your .csproj:
