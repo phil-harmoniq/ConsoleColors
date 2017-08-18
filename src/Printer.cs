@@ -3,7 +3,6 @@ using System.Linq;
 using System.Reflection;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using Shell.NET;
 
 namespace ConsoleColors
 {
