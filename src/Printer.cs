@@ -10,28 +10,16 @@ namespace ConsoleColors
     /// ANSI-color compatible printer; use string formatting while calling Write() or WriteLine()
     public static class Printer
     {
-        static string _v = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion;
-        private static bool _linux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
-        private static bool _mac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
-        internal static Bash _bash = new Bash();
+        readonly static string _assembly = Assembly.GetExecutingAssembly().Location;
+        readonly static string _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
 
         /// Print the given colorized string without a new line at the end
-        public static void Write(string output)
-        {
-            if (_linux || _mac)
-                _bash.Echo(output, "-en");
-            else
-                Console.Write(output);
-        }
+        public static void Write(string output) =>
+            Echo(output, "-ne");
 
         /// Print the given colorized string with a new line at the end
-        public static void WriteLine(string output)
-        {
-            if (_linux || _mac)
-                _bash.Echo(output, "-e");
-            else
-                Console.Write(output);
-        }
+        public static void WriteLine(string output) =>
+            Echo(output, "-e");
 
         /// Color print the library name and version
         public static void SayHello()
@@ -53,6 +41,31 @@ namespace ConsoleColors
                     + $"{Clr.White} {_v}"
                     + $"{Reset.Code}"
             );
+        }
+
+        internal static void Echo(string input, string flags)
+        {
+            using (var bash = new Process { StartInfo = BashInfo(false) })
+            {
+                bash.Start();
+                bash.StandardInput.WriteLine("echo " + flags + " \"" + input + "\"; exit");
+                bash.WaitForExit();
+                bash.Close();
+            }
+        }
+
+        private static ProcessStartInfo BashInfo(bool redirectOutput)
+        {
+            return new ProcessStartInfo
+            {
+                FileName = "bash",
+                RedirectStandardInput = true,
+                RedirectStandardOutput = redirectOutput,
+                RedirectStandardError = redirectOutput,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                ErrorDialog = false
+            };
         }
     }
 }
