@@ -26,29 +26,29 @@ namespace ConsoleColors
         public const string UnHidden = @"\e[28m";
 
         /// Enable bold formatting without printing
-        public static void SetBold() => Printer.Echo(Bold, "-e");
+        public static void SetBold() => Printer.Echo(Bold, "-ne");
         /// Enable dim formatting without printing
-        public static void SetDim() => Printer.Echo(Dim, "-e");
+        public static void SetDim() => Printer.Echo(Dim, "-ne");
         /// Enable underline formatting without printing
-        public static void SetUnderline() => Printer.Echo(Underline, "-e");
+        public static void SetUnderline() => Printer.Echo(Underline, "-ne");
         /// Enable inverted formatting without printing
-        public static void SetInvert() => Printer.Echo(Invert, "-e");
+        public static void SetInvert() => Printer.Echo(Invert, "-ne");
         /// Enable hidden formatting without printing
-        public static void SetHidden() => Printer.Echo(Hidden, "-e");
+        public static void SetHidden() => Printer.Echo(Hidden, "-ne");
 
         /// Disable bold formatting without printing
-        public static void UnsetBold() => Printer.Echo(UnBold, "-e");
+        public static void UnsetBold() => Printer.Echo(UnBold, "-ne");
         /// Disable dim formatting without printing
-        public static void UnsetDim() => Printer.Echo(UnDim, "-e");
+        public static void UnsetDim() => Printer.Echo(UnDim, "-ne");
         /// Disable underline formatting without printing
-        public static void UnsetUnderline() => Printer.Echo(UnUnderline, "-e");
+        public static void UnsetUnderline() => Printer.Echo(UnUnderline, "-ne");
         /// Disable inverted formatting without printing
-        public static void UnsetInvert() => Printer.Echo(UnInvert, "-e");
+        public static void UnsetInvert() => Printer.Echo(UnInvert, "-ne");
         /// Disable hidden formatting without printing
-        public static void UnsetHidden() => Printer.Echo(UnHidden, "-e");
+        public static void UnsetHidden() => Printer.Echo(UnHidden, "-ne");
         /// Disable all formatting without printing
         public static void UnsetAll() => Printer.Echo(
-            UnBold + UnDim + UnUnderline + UnInvert + UnHidden, "-e");
+            UnBold + UnDim + UnUnderline + UnInvert + UnHidden, "-ne");
 
         /// Returns all available formatting options as an array
         public static string[] ToArray() => new string[]
