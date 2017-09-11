@@ -44,22 +44,22 @@ namespace ConsoleColors
 
         internal static void Echo(string input, string flags)
         {
-            using (var bash = new Process { StartInfo = BashInfo })
-            {
-                // Single-quotes without a closer will cause bash to hang. Need to escape it.
-                input = input.Replace("'", @"'\''");
+            // Single-quotes without a closer will cause bash to hang. Need to escape it.
+            input = input.Replace("'", @"'\''");
 
+            using (var bash = new Process { StartInfo = BashInfo(input, flags) })
+            {
                 bash.Start();
-                bash.StandardInput.WriteLine("echo " + flags + " '" + $@"{input}" + "'; exit");
                 bash.WaitForExit();
                 bash.Close();
             }
         }
 
-        private static ProcessStartInfo BashInfo => new ProcessStartInfo
+        private static ProcessStartInfo BashInfo(string input, string flags) => new ProcessStartInfo
         {
             FileName = "bash",
-            RedirectStandardInput = true,
+            Arguments = $"-c \"echo {flags} '{input}'\"",
+            RedirectStandardInput = false,
             RedirectStandardOutput = false,
             RedirectStandardError = false,
             UseShellExecute = false,

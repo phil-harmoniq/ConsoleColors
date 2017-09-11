@@ -14,8 +14,8 @@ namespace TestApp
                 $"This library uses {Clr.Cyan}{Frmt.Bold}Shell.NET{Clr.Default}!{Reset.Code}");
             Printer.WriteLine(
                 $"{Bkgrd.Blue}{Frmt.Bold}I'm Mr. Meseeks Look at me!{Reset.Code}");
-            Printer.WriteLine(
-                string.Format("{0}{4}C#{5} + {2}{4}*nix{5} = {3}{4}<3{5}",
+            Printer.WriteLine(string.Format(
+                "{0}{4}C#{5} + {2}{4}*nix{5} = {3}{4}<3{5}",
                 Clr.Magenta,
                 Clr.White,
                 Clr.Green,
