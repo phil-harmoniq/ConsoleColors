@@ -22,7 +22,7 @@ Or add the following to your .csproj:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="ConsoleColors" Version="0.1.9-alpha" />
+  <PackageReference Include="ConsoleColors" Version="0.1.10-alpha" />
 </ItemGroup>
 ```
 
