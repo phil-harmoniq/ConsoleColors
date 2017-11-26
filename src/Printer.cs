@@ -14,9 +14,6 @@ namespace ConsoleColors
 
         static Printer()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                throw new PlatformNotSupportedException();
-
             _assembly = Assembly.GetExecutingAssembly().Location;
             _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
         }
@@ -53,6 +50,9 @@ namespace ConsoleColors
 
         internal static void Echo(string input, string flags)
         {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                throw new PlatformNotSupportedException();
+            
             // Single-quotes without a closer will cause bash to hang. Need to escape it.
             input = input.Replace("'", @"'\''");
 
