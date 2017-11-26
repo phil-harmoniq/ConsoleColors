@@ -9,8 +9,17 @@ namespace ConsoleColors
     /// ANSI-color compatible printer; use string formatting while calling Write() or WriteLine()
     public static class Printer
     {
-        readonly static string _assembly = Assembly.GetExecutingAssembly().Location;
-        readonly static string _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
+        private static string _assembly { get; }
+        private static string _v { get; }
+
+        static Printer()
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                throw new PlatformNotSupportedException();
+
+            _assembly = Assembly.GetExecutingAssembly().Location;
+            _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
+        }
 
         /// Print the given colorized string without a new line at the end
         public static void Write(string output) =>
