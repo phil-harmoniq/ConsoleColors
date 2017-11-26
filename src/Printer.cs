@@ -9,8 +9,14 @@ namespace ConsoleColors
     /// ANSI-color compatible printer; use string formatting while calling Write() or WriteLine()
     public static class Printer
     {
-        readonly static string _assembly = Assembly.GetExecutingAssembly().Location;
-        readonly static string _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
+        private static string _assembly { get; }
+        private static string _v { get; }
+
+        static Printer()
+        {
+            _assembly = Assembly.GetExecutingAssembly().Location;
+            _v = FileVersionInfo.GetVersionInfo(_assembly).ProductVersion;
+        }
 
         /// Print the given colorized string without a new line at the end
         public static void Write(string output) =>
@@ -44,22 +50,25 @@ namespace ConsoleColors
 
         internal static void Echo(string input, string flags)
         {
-            using (var bash = new Process { StartInfo = BashInfo })
-            {
-                // Single-quotes without a closer will cause bash to hang. Need to escape it.
-                input = input.Replace("'", @"'\''");
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                throw new PlatformNotSupportedException();
+            
+            // Single-quotes without a closer will cause bash to hang. Need to escape it.
+            input = input.Replace("'", @"'\''");
 
+            using (var bash = new Process { StartInfo = BashInfo(input, flags) })
+            {
                 bash.Start();
-                bash.StandardInput.WriteLine("echo " + flags + " '" + $@"{input}" + "'; exit");
                 bash.WaitForExit();
                 bash.Close();
             }
         }
 
-        private static ProcessStartInfo BashInfo => new ProcessStartInfo
+        private static ProcessStartInfo BashInfo(string input, string flags) => new ProcessStartInfo
         {
             FileName = "bash",
-            RedirectStandardInput = true,
+            Arguments = $"-c \"echo {flags} '{input}'\"",
+            RedirectStandardInput = false,
             RedirectStandardOutput = false,
             RedirectStandardError = false,
             UseShellExecute = false,
