@@ -20,11 +20,11 @@ namespace ConsoleColors
 
         /// Print the given colorized string without a new line at the end
         public static void Write(string output) =>
-            Echo(output, "-ne");
+            Printf(output, newLine: false);
 
         /// Print the given colorized string with a new line at the end
         public static void WriteLine(string output) =>
-            Echo(output, "-e");
+            Printf(output);
 
         /// Color print the library name and version
         public static void SayHello()
@@ -48,7 +48,7 @@ namespace ConsoleColors
             );
         }
 
-        internal static void Echo(string input, string flags)
+        internal static void Printf(string input, bool newLine = true)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 throw new PlatformNotSupportedException();
@@ -56,7 +56,9 @@ namespace ConsoleColors
             // Single-quotes without a closer will cause bash to hang. Need to escape it.
             input = input.Replace("'", @"'\''");
 
-            using (var bash = new Process { StartInfo = BashInfo(input, flags) })
+            if (newLine) input += Environment.NewLine;
+
+            using (var bash = new Process { StartInfo = BashInfo(input) })
             {
                 bash.Start();
                 bash.WaitForExit();
@@ -64,10 +66,10 @@ namespace ConsoleColors
             }
         }
 
-        private static ProcessStartInfo BashInfo(string input, string flags) => new ProcessStartInfo
+        private static ProcessStartInfo BashInfo(string input) => new ProcessStartInfo
         {
             FileName = "bash",
-            Arguments = $"-c \"echo {flags} '{input}'\"",
+            Arguments = $"-c \"printf '{input}'\"",
             RedirectStandardInput = false,
             RedirectStandardOutput = false,
             RedirectStandardError = false,
