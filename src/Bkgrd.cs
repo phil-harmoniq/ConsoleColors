@@ -39,37 +39,37 @@ namespace ConsoleColors
         public const string LtCyan = @"\e[106m";
 
         /// Set background color to default without printing
-        public static void SetDefault() => Printer.Echo(Default, "-ne");
+        public static void SetDefault() => Printer.Printf(Default, newLine: false);
         /// Set background color to black without printing
-        public static void SetBlack() => Printer.Echo(Black, "-ne");
+        public static void SetBlack() => Printer.Printf(Black, newLine: false);
         /// Set background color to white without printing
-        public static void SetWhite() => Printer.Echo(White, "-ne");
+        public static void SetWhite() => Printer.Printf(White, newLine: false);
         /// Set background color to red without printing
-        public static void SetRed() => Printer.Echo(Red, "-ne");
+        public static void SetRed() => Printer.Printf(Red, newLine: false);
         /// Set background color to green without printing
-        public static void SetGreen() => Printer.Echo(Green, "-ne");
+        public static void SetGreen() => Printer.Printf(Green, newLine: false);
         /// Set background color to yellow without printing
-        public static void SetYellow() => Printer.Echo(Yellow, "-ne");
+        public static void SetYellow() => Printer.Printf(Yellow, newLine: false);
         /// Set background color to blue without printing
-        public static void SetBlue() => Printer.Echo(Blue, "-ne");
+        public static void SetBlue() => Printer.Printf(Blue, newLine: false);
         /// Set background color to magenta without printing
-        public static void SetMagenta() => Printer.Echo(Magenta, "-ne");
+        public static void SetMagenta() => Printer.Printf(Magenta, newLine: false);
         /// Set background color to cyan without printing
-        public static void SetCyan() => Printer.Echo(Cyan, "-ne");
+        public static void SetCyan() => Printer.Printf(Cyan, newLine: false);
         /// Set background color to light gray without printing
-        public static void SetLtGray() => Printer.Echo(LtGray, "-ne");
+        public static void SetLtGray() => Printer.Printf(LtGray, newLine: false);
         /// Set background color to dark gray without printing
-        public static void SetDrkGray() => Printer.Echo(DrkGray, "-ne");
+        public static void SetDrkGray() => Printer.Printf(DrkGray, newLine: false);
         /// Set background color to light red without printing
-        public static void SetLtRed() => Printer.Echo(LtRed, "-ne");
+        public static void SetLtRed() => Printer.Printf(LtRed, newLine: false);
         /// Set background color to light green without printing
-        public static void SetLtGreen() => Printer.Echo(LtGreen, "-ne");
+        public static void SetLtGreen() => Printer.Printf(LtGreen, newLine: false);
         /// Set background color to light yellow without printing
-        public static void SetLtYellow() => Printer.Echo(LtYellow, "-ne");
+        public static void SetLtYellow() => Printer.Printf(LtYellow, newLine: false);
         /// Set background color to light blue without printing
-        public static void SetLtBlue() => Printer.Echo(LtBlue, "-ne");
+        public static void SetLtBlue() => Printer.Printf(LtBlue, newLine: false);
         /// Set background color to light magenta without printing
-        public static void SetLtMagenta() => Printer.Echo(LtMagenta, "-ne");
+        public static void SetLtMagenta() => Printer.Printf(LtMagenta, newLine: false);
         
         /// Returns all available background colors as an array
         public static string[] ToArray() => new string[]

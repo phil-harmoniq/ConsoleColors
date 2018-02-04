@@ -15,14 +15,14 @@ Use string formatting/interpolation while calling `Printer.Write()` or `Printer.
 Use the .NET CLI to get [get this library off of Nuget!](https://www.nuget.org/packages/ConsoleColors)! Prereleases need an explicit version.
 
 ```bash
-dotnet add package ConsoleColors -v 0.1.10-alpha
+dotnet add package ConsoleColors -v 0.1.11-alpha
 ```
 
 Or add the following to your .csproj:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="ConsoleColors" Version="0.1.10-alpha" />
+  <PackageReference Include="ConsoleColors" Version="0.1.11-alpha" />
 </ItemGroup>
 ```
 
